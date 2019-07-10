@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="rangers.css">
+<link rel="stylesheet" href="cards.css">
+<link rel="stylesheet" href="style.css">
+{{#partial "content"}}
+
+
+            {{#each news}}
+            <dl class="row parts">
+
+                <dt class="col-sm-3">By {{dept_name}} created on {{creation}}</dt>
+
+                <dd class="col-sm-9">{{dept_news}}</dd>
+            </dl>
+            {{/each}}
+
+{{/partial}}
+{{> layout.hbs}}

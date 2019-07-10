@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="rangers.css">
+<link rel="stylesheet" href="cards.css">
+<link rel="stylesheet" href="style.css">
+{{#partial "content"}}
+<h2>The General Company News</h2>
+    {{#each news}}
+        <h3>Created at {{creation}}</h3>
+        <p>{{actual_news}}</p>
+
+    {{/each}}
+
+{{/partial}}
+{{> layout.hbs}}

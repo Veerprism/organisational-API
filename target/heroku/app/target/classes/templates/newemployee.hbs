@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="style.css">
+
+{{#partial "content"}}
+<div class="row ">
+    <div class="emps">
+    <form method="post" action="/employee/new" class="emp">
+        <div class="form-group"> <!-- Email field !-->
+            <label for="email_id" class="control-label">Name</label>
+            <input type="text" class="form-control" id="thename" name="thename" placeholder="Your name">
+        </div>
+        <div class="form-group"> <!-- Radio group !-->
+            <label class="control-label">Position in company</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="position" value="Head of Department">
+                    Head of Department
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio"  name="position" value="Accountant">
+                    Accountant
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio"  name="position" value="Desk Person">
+                    Desk Person
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio"  name="position" value="Casual Worker">
+                    Casual Worker
+                </label>
+            </div>
+        </div>
+        <select class="form-control dropdown-dark" name="department">
+            <option selected disabled>These are the departments</option>
+            {{#each dept}}
+                <option class="dropdown-item" value={{id}} >{{dept_name}}</option>
+            {{/each}}
+
+        </select>
+
+        <div class="form-group"> <!-- Submit button !-->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+        <div class="col">
+                <a href="/viewemployees"><button class="btn-primary btn-lg">View employees</button></a>
+                <a href="/employees"><button class="btn-primary btn-lg">View employees(JSON Format)</button></a>
+
+
+        </div>
+    </div>
+</div>
+{{/partial}}
+{{> layout.hbs}}

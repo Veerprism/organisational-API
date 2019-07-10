@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="rangers.css">
+<link rel="stylesheet" href="cards.css">
+{{#partial "content"}}
+    <h2>Company Details</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+
+            <tr>
+
+
+                <th>Company Name</th>
+                <th>Description</th>
+                <th>Total Departments</th>
+                <th>Total Employees</th>
+                <th>Creation</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            {{#each company}}
+                <tr>
+                    <td>{{companyname}}</td>
+                    <td>{{desc}}</td>
+                    <td>{{total_dept}}</td>
+                    <td>{{total_emp}}</td>
+                    <td>{{creation}}</td>
+
+
+                </tr>
+            {{/each}}
+            <tbody>
+        </table>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

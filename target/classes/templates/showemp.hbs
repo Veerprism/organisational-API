@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="rangers.css">
+<link rel="stylesheet" href="cards.css">
+
+{{#partial "content"}}
+    <h2>Employees</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+
+            <tr>
+
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Department ID</th>
+                <th>Department Name</th>
+                <th>Creation</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each emps}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{emp_name}}</td>
+                    <td>{{position}}</td>
+                    <td>{{department_id}}</td>
+                    <td>{{dept_name}}</td>
+                    <td>{{creation}}</td>
+                </tr>
+            {{/each}}
+            <tbody>
+        </table>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

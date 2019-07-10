@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="style.css">
+
+{{#partial "content"}}
+    <div class="row ">
+        <div class="news">
+            <form method="post" action="/deptnew" class="emp">
+                <div class="form-group"> <!-- Email field !-->
+                    <label for="news" class="control-label">Name</label>
+                  <input class="form-control" name="deptname" id="deptname" placeholder="Enter Department Name">
+                </div>
+
+                <input class="form-control" name="deptdesc" id="deptdesc" placeholder="Enter Department Descrition/Objectives(Less than 10 words)">
+                <select class="form-control dropdown-dark" name="department">
+                    <option selected disabled>These are the departments in place</option>
+                    {{#each dept}}
+                        <option disabled class="dropdown-item" value={{id}} >{{dept_name}}</option>
+                    {{/each}}
+
+                </select>
+
+                <div class="form-group"> <!-- Submit button !-->
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+            <div class="col">
+                <a href="/viewdepts"><button class="btn-primary btn-lg">View Departments</button></a>
+                <a href="/departments"><button class="btn-primary btn-lg">See Departments(JSON format)</button></a>
+
+
+
+            </div>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

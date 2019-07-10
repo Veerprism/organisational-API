@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="rangers.css">
+
+{{#partial "content"}}
+
+    <h2>Welcome to Organisational-API</h2>
+    <h3>Use this information to use the API effectively</h3>
+    <h4>Using a tool such a Postman you can to the following:</h4>
+    <dl class="row parts">
+        <dt class="col-sm-3">To be able to create a department</dt>
+        <dd class="col-sm-9">Use Post method route <span class="instruction">/departments/new</span> with keys of <span class="key">"dept_name"</span> and <span class="key">"dept_description"</span> then you specify the values. Or use UI <span><a href="/newdept"><button class="btn-success btn-sm">Click me</button></a></span></dd>
+    </dl>
+    <dl class="row parts">
+        <dt class="col-sm-3">To create general news</dt>
+        <dd class="col-sm-9">Use Post method route <span class="instruction">/news/company</span> with key of <span class="key">"companynews"</span>. Or use UI <span><a href="/newcompanynews"><button class="btn-success btn-sm">Click me</button></a></span></dd>
+    </dl>
+    <dl class="row parts">
+        <dt class="col-sm-3">To see individual details of employees</dt>
+        <dd class="col-sm-9">Use Get method route <span class="instruction">/employees</span>. Or use UI <span><a href="/viewemployees"><button class="btn-success btn-sm">Click me</button></a></span></dd>
+    </dl>
+    <dl class="row parts">
+        <dt class="col-sm-3">To view the departments</dt>
+        <dd class="col-sm-9">Use Get method route <span class="instruction">/departments</span>. Or use UI <span><a href="/viewdepts"><button class="btn-success btn-sm">Click me</button></a></span></dd>
+    </dl>
+    <dl class="row parts">
+        <dt class="col-sm-3">To view departments news</dt>
+        <dd class="col-sm-9">Use Get method route <span class="instruction">/thenews</span>. Or use UI <span><a href="/viewnews"><button class="btn-success btn-sm">Click me</button></a></span></dd>
+    </dl>
+    <dl class="row parts">
+        <dt class="col-sm-3">To enter news for a particular department</dt>
+        <dd class="col-sm-9">Use Post method route <span class="instruction">/news/new</span> with keys of <span class="key">"deptid"</span> and <span class="key">"deptnews"</span> then you specify the values. Or use UI <span><a href="/postnews"><button class="btn-success btn-sm">Click me</button></a></span></dd>
+    </dl>
+
+
+
+
+
+
+
+{{/partial}}
+{{> layout.hbs}}

@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="rangers.css">
+<link rel="stylesheet" href="cards.css">
+{{#partial "content"}}
+    <h2>Department News</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+
+            <tr>
+
+                <th>Department Name</th>
+                <th>Department ID</th>
+                <th>Department Description</th>
+                <th>Total Employees</th>
+                <th>Total News</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each dept}}
+                <tr>
+                    <td>{{dept_name}}</td>
+                    <td>{{id}}</td>
+                    <td>{{desc}}</td>
+                    <td>{{emp_total}}</td>
+                    <td>{{news_total}}</td>
+
+
+                </tr>
+            {{/each}}
+            <tbody>
+        </table>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
